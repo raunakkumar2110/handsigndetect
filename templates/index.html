@@ -1,0 +1,149 @@
+{% extends "layout.html" %}
+{% block title %}
+    hand sign
+{% endblock %}
+
+{% block content %}
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="loader"></div>
+        </div><!--End off Preloader -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white container-fluid">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="{{url_for('static', filename='isl.png')}}" style="width: 100%;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Working</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('mentor') }}">Mentor</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Try System Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div style="width: 100%; overflow: hidden;">
+        <img src="{{url_for('static', filename='wel1.png')}}" style="width: 100%;" />
+        <!-- Position the "Read More" button at specific coordinates within the container -->
+        <div class="btn btn-default"
+       style="position: absolute; top: 570px; left: 700px; background-color: #fff; border: none; color: rgb(0, 168, 133);padding: 19px 80px;"
+       onmouseover="this.style.backgroundColor='#f5f5f5'; this.style.color='#0a853e';"
+       onmouseout="this.style.backgroundColor='rgb(0, 168, 133)'; this.style.color='#fff';" onclick="window.scrollTo(0,document.body.offsetHeight)">Try it Now</div>
+       <!-- Position the "Try Now" button at specific coordinates within the container -->
+       <a href="#brand" class="btn btn-primary"
+       style="position: absolute; top: 570px; left: 935px; background-color: rgb(0, 168, 133); border: none; color: #fff;padding: 19px 80px;"
+       onmouseover="this.style.backgroundColor='#f5f5f5'; this.style.color='#0a853e';"
+       onmouseout="this.style.backgroundColor='rgb(0, 168, 133)'; this.style.color='#fff';">For real time streaming</a>
+    </div>
+    
+
+
+    <div style="width: 100%; overflow: hidden;">
+        <img src="{{url_for('static', filename='2.png')}}" style="width: 100%;" />
+    </div>
+    <div style="width: 100%; position: relative; overflow: hidden;">
+        <img src="{{url_for('static', filename='finalflow.png')}}" style="width: 100%;" />
+        
+        <!-- Position the "Read More" button at specific coordinates within the container -->
+        <a href="https://link.springer.com/article/10.1007/s00521-2019-04691-y" class="btn btn-default"
+       style="position: absolute; top: 536px; left: 960px; background-color: #fff; border: none; color: rgb(0, 168, 133);padding: 19px 80px;"
+       onmouseover="this.style.backgroundColor='#f5f5f5'; this.style.color='#0a853e';"
+       onmouseout="this.style.backgroundColor='rgb(0, 168, 133)'; this.style.color='#fff';">Read More</a>
+
+        <!-- Position the "Try Now" button at specific coordinates within the container -->
+        <a href="#brand" class="btn btn-primary"
+       style="position: absolute; top: 536px; left: 1210px; background-color: rgb(0, 168, 133); border: none; color: #fff;padding: 19px 80px;"
+       onmouseover="this.style.backgroundColor='#f5f5f5'; this.style.color='#0a853e';"
+       onmouseout="this.style.backgroundColor='rgb(0, 168, 133)'; this.style.color='#fff';">Try Now</a>
+    </div>
+    
+
+
+    <div class="container py-5">
+        <header class="text-black text-center">
+            <!-- <h1 class="display-4">Hand sign</h1> -->
+            <p class="lead mb-1" style="font-family: Arial ;font-weight: bold;" >Select Image And Get the output in the text</p>
+            <p class="lead mb-1">Upload Your Image Below</p>
+        </header>
+
+        <div class="row py-4">
+            <div class="col-lg-6 mx-auto">
+                <!-- Upload image input-->
+                <form action="{{ url_for('predict_image_file') }}" enctype="multipart/form-data" method="POST">
+                    <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                    <input class="form-control border-0" id="upload" name="file" type="file">
+                    <label class="font-weight-light text-muted" for="upload" id="upload-label">Choose file</label>
+                    <div class="input-group-append">
+                        <label class="btn btn-light m-0 rounded-pill px-4" for="upload"> <i
+                                class="fa fa-cloud-upload mr-2 text-muted"></i><small
+                                class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                    </div>
+                </div>
+
+
+                <!-- Uploaded image area-->
+                <p class="font-italic text-black text-center">The image uploaded will be rendered inside the box
+                    below.</p>
+                <div class="image-area  "  >
+                    <img alt="" class="img-fluid rounded shadow-sm mx-auto d-block"
+                                                  id="imageResult" name="imageResult"
+                                                  src="#">
+                                                </div>
+
+                <!-- Submit button-->
+                <div class="container">
+                    <div class="row">
+                        <div  class="col  text-center">
+                            <input style="width: 100px; height: 50px; font-weight: 500; border-radius: 15px;" class="btn btn-primary my-3" type="submit"/>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div style="display: flex; align-items: center;">
+        
+        <div>
+            <p style="font-family: Arial; font-weight: bold;">About Project</p>
+            <p style="font-family:'Courier New', Courier, monospace">Around 1 Million of people in India are<br>
+            deaf and around 10 million of people in<br> 
+            India are dumb. And they use sign language to communicate with each<br> 
+            other and normal people. Recently, a number of gestures-based techniques<br> 
+            are available to accomplish this, which can be used to convert the sign<br> 
+            language made by the disables into a form (such as text, voice, etc).</p>
+        </div>
+        
+
+        <img src="{{url_for('static', filename='table.png')}}" style="max-width: 300px; max-height: 300px; margin-left: 90px;" />
+        <p style="margin-left: 40px;" > ⬅ Testing Letters</p>
+    </div>
+</footer>
+
+
+{% endblock %}

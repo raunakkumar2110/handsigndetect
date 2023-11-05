@@ -1,0 +1,165 @@
+{% extends "layout.html"%}
+{% block title %}
+Prediction - Hand Sign Detection
+{% endblock %}
+
+{% block content %}
+<!-- <div class="container py-5">
+
+    <header class="text-black text-center">
+        <h1 class="display-4">Hand Sign Detection</h1>
+        <p class="lead mb-5">You will see the prediction of the input image.</p>
+    </header>
+
+    <header class="text-white text-center">
+        <h1 class="display-5">Prediction</h1>
+        {% if predictions %}
+        <h2 class="display-4 text-dark font-weight-bold">{{predictions}}</h2>
+        {% else %}
+        <h2 class="display-4 text-dark font-weight-bold">{{err}}</h2>
+        {% endif %}
+    </header>
+</div> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hand Sign Detection</title>
+    <!-- Add your CSS link here if you have one -->
+    <style>
+        .container {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .prediction-box {
+            padding: 20px;
+            border: 2px solid #17a2b8;
+            border-radius: 10px;
+            background-color: #d4edf7;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        /* Styles for the navigation bar */
+   .navbar {
+            display: flex;
+            justify-content: end;
+            background-color: #333;
+            overflow: hidden;
+            text-align: right; /* Align the button to the right */
+        }
+
+        /* Style for the button */
+        .animated-button {
+       
+            padding: 10px 20px; /* Adjust the height and width as needed */
+            border: none;
+            border-radius: 0; /* Remove border-radius */
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            background-color:  #333; /* Fixed background color */
+            color: #fff;
+            float: right; /* Align the button to the right */
+            transition: transform 0.3s ease; /* Add a transition for smooth zoom */
+        }
+
+        .animated-button:hover {
+            background-color: #3498db; /* Set the final color */
+            transform: scale(1.1); /* Zoom in by 10% on hover */
+        }
+
+        .animated-button:focus {
+            outline: none;
+        }
+
+        /* footer css starts */
+        html, body {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  footer {
+    background-color: #201f1f;
+    color: white;
+    padding: 12x;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+     
+    </style>
+</head>
+<body>
+    <!-- Navigation bar with the button -->
+ <div class="navbar">
+    <a class="animated-button" href="/">Home</a>
+</div>
+    <div class="container py-5">
+        <header class="text-center">
+            <h1 class="display-4 text-primary">Hand Sign Detection</h1>
+            <p class="lead">Get predictions for your input image.</p>
+        </header>
+
+        <div class="text-center prediction-box">
+            <h2 class="display-5 text-success">Prediction</h2>
+            {% if predictions %}
+            <h3 class="display-4 font-weight-bold">{{ predictions }}</h3>
+            {% else %}
+            <h3 class="display-4 font-weight-bold text-danger">{{ err }}</h3>
+            {% endif %}
+        </div>
+    </div>
+<!-- Footer Starting -->
+<footer>
+    <div style="display: flex; align-items: center;">
+        
+        <div>
+            <p style="font-family: Arial; font-weight: bold;">About Project</p>
+            <p style="font-family:'Courier New', Courier, monospace">Around 1 Million of people in India are<br>
+            deaf and around 10 million of people in<br> 
+            India are dumb. And they use sign language to communicate with each<br> 
+            other and normal people. Recently, a number of gestures-based techniques<br> 
+            are available to accomplish this, which can be used to convert the sign<br> 
+            language made by the disables into a form (such as text, voice, etc).</p>
+        </div>
+        
+  
+        <img src="{{url_for('static', filename='table.png')}}" style="max-width: 300px; max-height: 300px; margin-left: 90px;" />
+        <p style="margin-left: 40px;" > ⬅ Testing Letters</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+{% endblock %}

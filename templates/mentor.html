@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mentor</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+<style>
+body, h1, h2, h3, h4, h5, h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding: 20px}
+    /* Styles for the navigation bar */
+   /* Styles for the navigation bar */
+   .navbar {
+            background-color: #333;
+            overflow: hidden;
+            text-align: right; /* Align the button to the right */
+        }
+
+        /* Style for the button */
+        .animated-button {
+            display: inline-block;
+            padding: 10px 20px; /* Adjust the height and width as needed */
+            border: none;
+            border-radius: 0; /* Remove border-radius */
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            background-color:  #333; /* Fixed background color */
+            color: #fff;
+             /* Align the button to the right */
+            transition: transform 0.3s ease; /* Add a transition for smooth zoom */
+        }
+
+        .animated-button:hover {
+            background-color: #3498db; /* Set the final color */
+            transform: scale(1.1); /* Zoom in by 10% on hover */
+        }
+
+        .animated-button:focus {
+            outline: none;
+        }
+        /* Styles for the animated box */
+        .animated-box {
+            width: 300px;
+            height: 60px;
+            background-color: #f39c12;
+            border-radius: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        .animated-box:hover {
+            transform: scale(1.1); /* Zoom in by 10% on hover */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
+        }
+        footer {
+    background-color:#201f1f;
+    color: white;
+    padding: 40px;
+
+}
+
+</style>
+</head>
+<body >
+ <!-- Navigation bar with the button -->
+ <div class="navbar">
+    <a class="animated-button" href="/">Home</a>
+</div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width: 1200px; margin-top: 100px">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <!-- <h3>Mentor</h3><br> -->
+    <div class="animated-box">
+        <h3 >Mentor</h3>
+    </div>
+    <div class="w3-row">
+      <div class="w3-half">
+        <img  src="{{url_for('static', filename='prateek.jpg')}}" alt="Mentor 2" class="w3-image" style="display: block; margin: auto" width="300" height="200">
+        <h4><b>Dr. Parteek kumar</b> <h6><b>Associate Professor</b></h6></h4>
+      </div>
+      <div class="w3-half">
+        <img src="{{url_for('static', filename='ank.jpg')}}" alt="Mentor 1" class="w3-image" style="display: block; margin: auto" width="300" height="200">
+        <h4><b>Ankita Wadhawan</b> <h6><b>Research Scholar, Doctorate of Philosophy<b></h6></h4>
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>
+<!-- Footer Starting -->
+<footer>
+  <div style="display: flex; align-items: center;">
+      
+      <div>
+          <p style="font-family: Arial; font-weight: bold;">About Project</p>
+          <p style="font-family:'Courier New', Courier, monospace">Around 1 Million of people in India are<br>
+          deaf and around 10 million of people in<br> 
+          India are dumb. And they use sign language to communicate with each<br> 
+          other and normal people. Recently, a number of gestures-based techniques<br> 
+          are available to accomplish this, which can be used to convert the sign<br> 
+          language made by the disables into a form (such as text, voice, etc).</p>
+      </div>
+      
+
+      <img src="{{url_for('static', filename='table.png')}}" style="max-width: 300px; max-height: 300px; margin-left: 90px;" />
+      <p style="margin-left: 40px;" > ⬅ Testing Letters</p>
+  </div>
+</footer>
+
+</body>
+</html>

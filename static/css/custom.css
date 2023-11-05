@@ -1,0 +1,198 @@
+#upload {
+    opacity: 0;
+}
+
+#upload-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.image-area {
+    border: 2px dashed rgba(255, 255, 255, 0.7);
+
+    position: relative;
+}
+
+.image-area::before {
+    content: 'Image Preview';
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+
+.image-area img {
+    z-index: 2;
+    position: relative;
+}
+
+
+body {
+    min-height: 100vh;
+    background-color: #757f9a;
+    background-image: linear-gradient(147deg, #ffffff 0%, #ffffff 100%);
+}
+
+
+
+
+
+.navbar-brand {
+    font-family: 'Calibri', Times, serif, sans-serif;
+    font-weight: bold; /* Optional: Make the text bold */
+    font-size: 30px; /* Optional: Adjust the font size */
+}
+footer {
+    background-color:#201f1f;
+    color: white;
+    padding: 40px;
+
+}
+
+
+/* preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*
+Home Section style
+==================*/
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a general font and adjust text color */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Apply styles to the main container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Apply styles to the home section with a background image */
+.home {
+    background-image: url("/static/home-bg.jpg"); /* Replace 'your-image-url.jpg' with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+
+    /* Add these properties to ensure the image covers the entire background */
+    width: 100%;
+    height: 100%;
+}
+
+
+.home .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.home h2 {
+    font-size: 36px;
+}
+
+.home h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+home h3 {
+    font-size: 24px;
+}
+
+/* Style buttons */
+.home .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+home .btn.btn-primary {
+    background-color: #007bff;
+}
+
+home .btn.btn-default {
+    background-color: #777;
+}
+
+home .btn:hover {
+    background-color: #555;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .home h2 {
+        font-size: 24px;
+    }
+
+    .home h1 {
+        font-size: 36px;
+    }
+
+    .home h3 {
+        font-size: 18px;
+    }
+}
+
+.culmn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+
+/* Add additional CSS rules as needed for other elements within .culmn */
