@@ -44,18 +44,20 @@
             </div>
         </div>
     </nav>
-    <div style="width: 100%; overflow: hidden;">
-        <img src="{{url_for('static', filename='wel1.png')}}" style="width: 100%;" />
+    <div class="home" style="width: 100%; overflow: hidden;">
+        <!-- <img src="{{url_for('static', filename='home-bg.jpg')}}" style="width: 100%;height: 750px;" /> -->
         <!-- Position the "Read More" button at specific coordinates within the container -->
-        <div class="btn btn-default"
-       style="position: absolute; top: 570px; left: 700px; background-color: #fff; border: none; color: rgb(0, 168, 133);padding: 19px 80px;"
+        <div id="home-title">Welcome to ISL <br> Indian Sign language</div>
+        <div id="button-container">
+
+      <div class="btn btn-primary" id="button"
        onmouseover="this.style.backgroundColor='#f5f5f5'; this.style.color='#0a853e';"
        onmouseout="this.style.backgroundColor='rgb(0, 168, 133)'; this.style.color='#fff';" onclick="window.scrollTo(0,document.body.offsetHeight)">Try it Now</div>
        <!-- Position the "Try Now" button at specific coordinates within the container -->
-       <a href="#brand" class="btn btn-primary"
-       style="position: absolute; top: 570px; left: 935px; background-color: rgb(0, 168, 133); border: none; color: #fff;padding: 19px 80px;"
+       <a href="#brand" class="btn btn-primary"  id="button2"
        onmouseover="this.style.backgroundColor='#f5f5f5'; this.style.color='#0a853e';"
        onmouseout="this.style.backgroundColor='rgb(0, 168, 133)'; this.style.color='#fff';">For real time streaming</a>
+    </div>
     </div>
     
 
@@ -63,20 +65,28 @@
     <div style="width: 100%; overflow: hidden;">
         <img src="{{url_for('static', filename='2.png')}}" style="width: 100%;" />
     </div>
-    <div style="width: 100%; position: relative; overflow: hidden;">
-        <img src="{{url_for('static', filename='finalflow.png')}}" style="width: 100%;" />
-        
+
+
+
+
+    <div id="masw" style="width: 100%; position: relative; overflow: hidden;">
+        <!-- <img src="{{url_for('static', filename='finalflow.png')}}" style="width: 100%;" /> -->
+        <div class="msw1"></div>
+        <div class="msw1">
+            
         <!-- Position the "Read More" button at specific coordinates within the container -->
-        <a href="https://link.springer.com/article/10.1007/s00521-2019-04691-y" class="btn btn-default"
+        <a href="https://link.springer.com/article/10.1007/s00521-2019-04691-y" class="btn btn-default btn1"
        style="position: absolute; top: 536px; left: 960px; background-color: #fff; border: none; color: rgb(0, 168, 133);padding: 19px 80px;"
        onmouseover="this.style.backgroundColor='#f5f5f5'; this.style.color='#0a853e';"
        onmouseout="this.style.backgroundColor='rgb(0, 168, 133)'; this.style.color='#fff';">Read More</a>
 
         <!-- Position the "Try Now" button at specific coordinates within the container -->
-        <a href="#brand" class="btn btn-primary"
+        <a href="#brand" class="btn btn-primary btn1 "
        style="position: absolute; top: 536px; left: 1210px; background-color: rgb(0, 168, 133); border: none; color: #fff;padding: 19px 80px;"
        onmouseover="this.style.backgroundColor='#f5f5f5'; this.style.color='#0a853e';"
        onmouseout="this.style.backgroundColor='rgb(0, 168, 133)'; this.style.color='#fff';">Try Now</a>
+    
+    </div>
     </div>
     
 

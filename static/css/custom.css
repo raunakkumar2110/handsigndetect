@@ -118,10 +118,13 @@ body {
     position: relative;
     padding: 100px 0;
     text-align: center;
-
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
     /* Add these properties to ensure the image covers the entire background */
     width: 100%;
-    height: 100%;
+    height: 750px;
 }
 
 
@@ -148,9 +151,10 @@ home h3 {
 }
 
 /* Style buttons */
-.home .btn {
-    margin-top: 20px;
-    padding: 10px 20px;
+.btn {
+
+  margin-left: 10px;
+height: 100%;
     text-decoration: none;
     color: #fff;
     border: none;
@@ -159,6 +163,23 @@ home h3 {
     transition: background-color 0.3s ease;
 }
 
+#button{
+
+    font-weight: 600;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+#button2{
+    font-weight: 600;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
 home .btn.btn-primary {
     background-color: #007bff;
 }
@@ -193,6 +214,59 @@ home .btn:hover {
     justify-content: center;
     height: 100vh; /* Adjust the height as needed */
 }
+#home-title{
+    font-size: 70px;
+    font-weight: 500;
+    color: white;
+}
+#button-container{
+  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+height: 60px;
+
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+}
+
+
+#masw{
+    background-image: url("/static/finalflow.png");
+    width: 100%;
+    height: 730px;
+  display: flex;
+  flex-direction: row;
+
+}
+.msw1{
+width: 50%;
+height: 100%; 
+
+}
+.btn1{
+    height: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Add additional CSS rules as needed for other elements within .culmn */
